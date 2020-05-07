@@ -38,7 +38,7 @@ Caso o ficheiro esteja em modo binário, deverá ser considerado que o ficheiro 
 ```
 No exemplo `<byte0>` corresponde à coordenada A11. A coordenada B11 será dada pelo `<byte24>`.
 
-Caso o utlizador introduza uma coordenada inválida o programa deverá imprimir a mensagem: `Error: Invalid coordinate.`
+Caso o utlizador introduza uma coordenada inválida o programa deverá imprimir a mensagem: `Error: Invalid coordinate.`. Caso o ficheiro esteja mal formatado, o programa deverá terminar com a mensagem: `Error: File is corrupted.`.
 
 ### Exemplo de execução do programa:
 ```bash
