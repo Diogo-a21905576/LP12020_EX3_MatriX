@@ -14,7 +14,7 @@ Na resolução deste trabalho deve ser utilizada a Linguagem de Programação C.
 - É estritamente proibida a utilização da instrução `goto`. 
 
 ## Descrição do problema
-Faça um programa que lê um ficheiro que contém a informação de um *cartão matriz* de um banco. O programa deverá ler pela linha de comando o nome do ficheiro e qual o modo de leitura do ficheiro (texto ou binário). Após a leitura do ficheiro, o programa deverá ler do utilizador 3 coordenadas do cartão (exemplo: `A32 F73 B21`) e depois deverá imprimir os 3 números correspondentes no terminal. O utilizador poderá pedir novas coordenadas ou, caso pretenda sair deverá introduzir o caracter `q`. Nesse caso o programa termina sem mostrar nenhuma mensagem.
+Faça um programa que lê um ficheiro que contém a informação de um *cartão matriz* de um banco. O programa deverá ler pela linha de comando o nome do ficheiro e qual o modo de leitura do ficheiro (texto ou binário). Após a leitura do ficheiro, o programa deverá ler do utilizador 3 coordenadas do cartão (exemplo: `A32 F73 B21`) e depois deverá imprimir os 3 números correspondentes no terminal e em seguida deve terminar sem mostrar nenhuma mensagem.
 
 Exemplo de ficheiro texto com a informação do cartão matriz:
 ```
@@ -31,8 +31,8 @@ O utilizador especifica na linha de comando o nome do ficheiro e também o modo:
 ```bash
 >./MatriX <nome do ficheiro> <modo>
 ```
-Para o efeito o caracter `t` indica que o ficheiro está gravado em modo texto, e `b` indica que está em modo binário. Os argumentos da linha de comando deverão obedecer a ordem indicada. 
-Caso o ficheiro esteja em modo binário, deverá ser considerado que o ficheiro contém 192 bytes em que cada byte contém um dígito entre 0 e 9. Não contém espaços nem quebras de linha. Exemplo:
+Para o efeito o caracter `t` indica que o ficheiro está gravado em modo texto, e `b` indica que está em modo binário. Os argumentos da linha de comando deverão obedecer à ordem indicada. 
+Caso o ficheiro esteja em modo binário, deverá ser considerado que o ficheiro contém 192 bytes em que cada byte contém um dígito entre 0 e 9. Não contém espaços nem quebras de linha:
 ```
 <byte0><byte1><byte2><byte3><byte4>...
 ```
@@ -40,14 +40,17 @@ No exemplo `<byte0>` corresponde à coordenada A11. A coordenada B11 será dada 
 
 Caso o utlizador introduza uma coordenada inválida o programa deverá imprimir a mensagem: `Error: Invalid coordinate.`. Caso o ficheiro esteja mal formatado, o programa deverá terminar com a mensagem: `Error: File is corrupted.`. Caso não seja possível abrir o ficheiro o programa deverá terminar com a mensagem: `Error: could not open file.`.
 
-### Exemplo de execução do programa:
+Encontram-se neste repositório dois ficheiros exemplo [matrix.txt](matrix.txt) e [matrix.dat](matrix.dat), codificados em texto e binário, respectivamente.
+
+### Exemplos de execução do programa:
 ```bash
 >./MatriX cartao_matriz.txt t
 B61 H83 E43
 7 8 9
-G22 G31 C81
-7 1 6
-q
 ```
 
-
+```bash
+>./MatriX cartao_matriz.dat b
+G22 G31 C81
+7 1 6
+```
