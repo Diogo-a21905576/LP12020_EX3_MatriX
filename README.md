@@ -38,7 +38,13 @@ Caso o ficheiro esteja em modo binário, deverá ser considerado que o ficheiro 
 ```
 No exemplo `<byte0>` corresponde à coordenada A11. A coordenada B11 será dada pelo `<byte24>`.
 
-Caso o utlizador introduza uma coordenada inválida o programa deverá imprimir a mensagem: `Error: Invalid coordinate.`. Caso o ficheiro esteja mal formatado, o programa deverá terminar com a mensagem: `Error: File is corrupted.`. Caso não seja possível abrir o ficheiro o programa deverá terminar com a mensagem: `Error: could not open file.`.
+Caso o utlizador introduza uma coordenada inválida o programa deverá imprimir a mensagem: `Error: Invalid coordinate.`. Caso o ficheiro esteja mal formatado, o programa deverá terminar com a mensagem: `Error: File is corrupted.`. Caso não seja possível abrir o ficheiro o programa deverá terminar com a mensagem: `Error: could not open file.`. Em resumo a definição das mensagens de erro é:
+ ```C
+#define ERR_FOPEN "Error: could not open file."
+#define ERR_COORD "Error: Invalid coordinate."
+#define ERR_CORPT "Error: File is corrupted."
+#define ERR_ARGS "Error: Invalid arguments."
+ ```
 
 Encontram-se neste repositório dois ficheiros exemplo [matrix.txt](matrix.txt) e [matrix.dat](matrix.dat), codificados em texto e binário, respectivamente.
 
