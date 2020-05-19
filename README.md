@@ -10,7 +10,7 @@ Na resolução deste trabalho deve ser utilizada a Linguagem de Programação C.
 - Evite duplicação de código. 
 - Considere a implementação de funções para melhorar a legibilidade, evitar a duplicação e criar soluções mais genéricas.
 - É proíbida a utilização de variáveis globais - i.e. variáveis declaradas fora de qualquer função - excepto constantes.
-- Este trabalho poderá ser realizado individualmente ou em grupos com o máximo de 2 alunos.
+- Este trabalho deverá ser feito individualmente.
 - É estritamente proibida a utilização da instrução `goto`. 
 
 ## Descrição do problema
